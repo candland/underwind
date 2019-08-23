@@ -1,0 +1,23 @@
+{
+  "name": "wpswind",
+  "version": "1.0.0",
+  "description": "[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel watch css/style.css --out-dir .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^1.2.0",
+    "autoprefixer": "^9.6.1",
+    "components": "^0.1.0",
+    "cssnano": "^4.1.10",
+    "parcel-bundler": "^1.12.3",
+    "postcss-import": "^12.0.1",
+    "tailwindcss": "^1.1.1",
+    "utilities": "^1.0.5"
+  },
+  "dependencies": {}
+}
