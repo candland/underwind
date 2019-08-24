@@ -164087,13 +164087,39 @@ ol {
  * MENU
  *************/
 
-.menu-item {
-  padding: 1rem;
-}
-
 .menu-main-container {
   display: inline;
 }
+
+.menu-main-container .menu-item {
+    padding: 1rem;
+  }
+
+.menu-footer-container {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: flex-start;
+}
+
+.footermenu {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footermenu li {
+    flex: 1 1 0%;
+    padding: 0;
+    padding-right: 1rem;
+  }
+
+.footermenu li a {
+      color: #4a5568;
+    }
+
+.site-info a {
+    color: #4a5568;
+    text-decoration: underline;
+  }
 
 
 

@@ -1,4 +1,3 @@
-
 h1 {
   @apply text-3xl pb-5;
 }
@@ -84,10 +83,29 @@ ol {
  * MENU
  *************/
 
-.menu-item {
-  @apply p-4;
-}
-
 .menu-main-container {
   display: inline;
+  .menu-item {
+    @apply p-4;
+  }
+}
+
+.menu-footer-container {
+  @apply flex flex-auto justify-start;
+}
+.footermenu {
+  @apply flex flex-wrap;
+
+  li {
+    @apply flex-1 p-0 pr-4;
+    a {
+      @apply text-gray-700;
+    }
+  }
+}
+
+.site-info {
+  a {
+    @apply text-gray-700 underline;
+  }
 }
