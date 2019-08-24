@@ -24,7 +24,7 @@
 			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'underwind' ), 'underwind', '<a href="https://wpsupporthq.com">WP Support HQ</a>' );
+        printf( esc_html__( 'Theme: %1$s by %2$s.', 'underwind' ), '<a href="https://github.com/candland/underwind">underwind</a>', '<a href="https://wpsupporthq.com">WP Support HQ</a>' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
