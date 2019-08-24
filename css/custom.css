@@ -85,5 +85,9 @@ ol {
  *************/
 
 .menu-item {
-  @apply p-4 border
+  @apply p-4;
+}
+
+.menu-main-container {
+  display: inline;
 }

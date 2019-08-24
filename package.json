@@ -1,14 +1,15 @@
 {
   "name": "wpswind",
   "version": "1.0.0",
-  "description": "[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)",
+  "description": "Underscores & TailwindCSS",
   "main": "index.js",
   "scripts": {
     "dev": "parcel watch css/style.css --out-dir .",
+    "prod": "NODE_ENV=production parcel watch css/style.css --out-dir .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "WP Support HQ",
+  "license": "MIT",
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^1.2.0",
     "autoprefixer": "^9.6.1",

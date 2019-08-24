@@ -24,7 +24,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'underwind' ); ?></a>
 
-	<header id="masthead" class="site-header container mx-auto p-4 flex flex-wrap">
+	<header id="masthead" class="site-header container mx-auto p-4 flex flex-wrap justify-between">
 		<div class="site-branding w-auto d-inline-block flex-auto">
 			<?php
 			the_custom_logo();
@@ -44,7 +44,7 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation w-auto d-inline-block flex-auto justify-right">
+		<nav id="site-navigation" class="main-navigation w-auto d-inline-block flex flex-auto justify-end">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'underwind' ); ?></button>
 			<?php
 			wp_nav_menu( array(
@@ -55,4 +55,4 @@
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content container mx-auto p-4">
+	<div id="content" class="site-content container mx-auto p-4 flex flex-wrap">

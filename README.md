@@ -1,4 +1,24 @@
-[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
+
+# Underwind - Underscores w/ TailwindCSS
+
+Generated _s theme with TailwindCSS & ParcelJS
+
+### Build
+
+In the root theme dir...
+
+```bash
+yarn install
+yarn run
+```
+
+_Production_
+
+```bash
+yarn install
+yarn prod
+```
+
 
 _s
 ===
