@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area flex-auto w-100 md:w-4/5 md:pr-12">
 		<main id="main" class="site-main">
 
 		<?php
