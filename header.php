@@ -24,8 +24,8 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'underwind' ); ?></a>
 
-	<header id="masthead" class="site-header bg-red-900">
-		<div class="site-branding">
+	<header id="masthead" class="site-header container mx-auto p-4 flex flex-wrap">
+		<div class="site-branding w-auto d-inline-block flex-auto">
 			<?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
@@ -44,7 +44,7 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
+		<nav id="site-navigation" class="main-navigation w-auto d-inline-block flex-auto justify-right">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'underwind' ); ?></button>
 			<?php
 			wp_nav_menu( array(
@@ -55,4 +55,4 @@
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+	<div id="content" class="site-content container mx-auto p-4">
