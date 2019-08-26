@@ -73,7 +73,7 @@ ol {
   @apply pb-3;
 }
 
-.content {
+.content-area {
   ul {
     @apply list-disc list-inside;
   }
@@ -106,6 +106,6 @@ ol {
 
 .site-info {
   a {
-    @apply text-gray-700 underline;
+    @apply text-gray-800;
   }
 }

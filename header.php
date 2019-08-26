@@ -24,8 +24,8 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'underwind' ); ?></a>
 
-	<header id="masthead" class="site-header container mx-auto p-4 flex flex-wrap justify-between">
-		<div class="site-branding w-auto d-inline-block flex-auto">
+	<header id="masthead" class="site-header container mx-auto p-4 flex flex-row flex-wrap justify-between">
+		<div class="site-branding flex-initial">
 			<?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
@@ -44,8 +44,10 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation w-auto d-inline-block flex flex-auto justify-end">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'underwind' ); ?></button>
+		<nav id="site-navigation" class="main-navigation flex flex-1 justify-end">
+      <button class="items-center px-3 py-2 border rounded text-teal-lighter border-teal-light hover:text-white hover:border-white menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+        <svg class="h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+      </button>
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
@@ -55,4 +57,4 @@
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content container mx-auto p-4 flex flex-wrap">
+	<div id="content" class="site-content container mx-auto p-4 flex flex-row flex-wrap">

@@ -4,8 +4,8 @@
   "description": "Underscores & TailwindCSS",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel watch css/style.css --out-dir .",
-    "prod": "NODE_ENV=production parcel watch css/style.css --out-dir .",
+    "dev": "parcel watch css/style.css js/index.js --out-dir ./dist",
+    "prod": "NODE_ENV=production parcel build css/style.css js/index.js --out-dir ./dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "WP Support HQ",

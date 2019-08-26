@@ -14,7 +14,7 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer container mx-auto p-4">
-    <div class="text-sm flex flex-wrap justify-between mb-12 mt-4">
+    <div class="flex flex-wrap justify-between mb-12 mt-4">
       <aside class="flex-auto w-100 lg:w-1/3">
         <?php dynamic_sidebar( 'footer-1' ); ?>
       </aside>
