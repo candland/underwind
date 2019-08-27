@@ -9,7 +9,7 @@ function uw_testimonial( $atts , $content = null ) {
 		$atts
 	);
 
-  return '<div class="mx-8 p-4 mb-4 bg-yellow-200 flex flex-row flex-wrap rounded">' .
+  return '<div class="mx-8 p-4 mb-4 bg-yellow-200 flex flex-row flex-wrap rounded-lg">' .
     '<div class="flex-initial min-w-full lg:min-w-0 flex justify-center pb-4 lg:pr-4">' .
     '<img src="' . esc_attr($atts['pic']) . '" alt="' . esc_attr($atts['author']) . '" width="100" height="100" class="flex-none rounded-full" style="width: 100px; height: 100px">' .
     '</div>' .
@@ -31,7 +31,7 @@ function uw_quote( $atts , $content = null ) {
 		$atts
 	);
 
-  return '<div class="mx-8 p-4 mb-4 bg-blue-200 rounded">' .
+  return '<div class="mx-8 p-4 mb-4 bg-blue-200 rounded-lg">' .
     $content . ' - ' . '<a href="' . esc_attr($atts['url']) . '" target="_blank">' . esc_attr($atts['src']) . '</a>' .
     '</div>';
 
@@ -57,8 +57,27 @@ function uw_div( $atts , $content = null ) {
 	);
 
   return '<div class="' . esc_attr($atts['class']) . '">' .
-    $content .
+    do_shortcode($content) .
     '</div>';
 
 }
 add_shortcode( 'div', 'uw_div' );
+
+
+function uw_faq_item( $atts , $content = null ) {
+
+	$atts = shortcode_atts(
+		array(
+      'title' => '',
+      'active' => true
+		),
+		$atts
+	);
+
+  return '<div class="">' .
+    '<h6 class="pb-1">' . esc_attr($atts['title']) . '</h6>' .
+    '<p>' . $content . '</p>' .
+    '</div>';
+
+}
+add_shortcode( 'faq_item', 'uw_faq_item' );

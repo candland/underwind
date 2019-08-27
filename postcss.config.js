@@ -21,7 +21,7 @@ if (process.env.NODE_ENV === 'production') {
       }
     ]
   }
-  config.plugins['cssnano'] = {}
+  // config.plugins['cssnano'] = {}
 }
 
 module.exports = config

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel watch css/style.css js/index.js --out-dir ./dist",
-    "prod": "NODE_ENV=production parcel build css/style.css js/index.js --out-dir ./dist",
+    "prod": "NODE_ENV=development parcel build css/style.css js/index.js --out-dir ./dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "WP Support HQ",

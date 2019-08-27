@@ -97,7 +97,7 @@ ol {
   @apply flex flex-wrap;
 
   li {
-    @apply flex-1 p-0 pr-4;
+    @apply p-0 pr-4;
     a {
       @apply text-gray-700;
     }
@@ -108,4 +108,8 @@ ol {
   a {
     @apply text-gray-800;
   }
+}
+
+.wp-post-image {
+  @apply mx-auto;
 }
