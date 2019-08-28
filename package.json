@@ -4,13 +4,14 @@
   "description": "Underscores & TailwindCSS",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel watch css/style.css js/index.js --out-dir ./dist",
-    "prod": "NODE_ENV=development parcel build css/style.css js/index.js --out-dir ./dist",
+    "dev": "parcel watch --public-url /wp-content/themes/underwind/dist css/style.css js/index.js --out-dir ./dist",
+    "prod": "NODE_ENV=development parcel build --public-url /wp-content/themes/underwind/dist css/style.css js/index.js --out-dir ./dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "WP Support HQ",
   "license": "MIT",
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.10.2",
     "@fullhuman/postcss-purgecss": "^1.2.0",
     "autoprefixer": "^9.6.1",
     "components": "^0.1.0",
@@ -20,5 +21,6 @@
     "tailwindcss": "^1.1.1",
     "utilities": "^1.0.5"
   },
-  "dependencies": {}
+  "dependencies": {
+  }
 }

@@ -21,6 +21,22 @@ function uw_testimonial( $atts , $content = null ) {
 }
 add_shortcode( 'uw_testimonial', 'uw_testimonial' );
 
+function uw_social( $atts , $_content = null ) {
+
+	$atts = shortcode_atts(
+		array(
+      'network' => '',
+      'url' => '',
+      'class' => 'text-gray-700'
+		),
+		$atts
+	);
+
+  return '<a href="' . esc_attr($atts['url']) . '" target="_blank"><i class="fab fa-' . esc_attr($atts['network']) . ' ' . esc_attr($atts['class']) . '"></i></a>';
+
+}
+add_shortcode( 'social', 'uw_social' );
+
 function uw_quote( $atts , $content = null ) {
 
 	$atts = shortcode_atts(

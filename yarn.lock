@@ -706,6 +706,16 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+"@fortawesome/fontawesome-free-webfonts@^1.0.9":
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free-webfonts/-/fontawesome-free-webfonts-1.0.9.tgz#72f2c10453422aba0d338fa6a9cb761b50ba24d5"
+  integrity sha512-nLgl6b6a+tXaoJJnSRw0hjN8cWM/Q5DhxKAwI9Xr0AiC43lQ2F98vQ1KLA6kw5OoYeAyisGGqmlwtBj0WqOI5Q==
+
+"@fortawesome/fontawesome-free@^5.10.2":
+  version "5.10.2"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.10.2.tgz#27e02da1e34b50c9869179d364fb46627b521130"
+  integrity sha512-9pw+Nsnunl9unstGEHQ+u41wBEQue6XPBsILXtJF/4fNN1L3avJcMF/gGF86rIjeTAgfLjTY9ndm68/X4f4idQ==
+
 "@fullhuman/postcss-purgecss@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@fullhuman/postcss-purgecss/-/postcss-purgecss-1.2.0.tgz#a3207a0e1812f8b56fa49fba5796a1020f2756a8"
@@ -2275,6 +2285,11 @@ find-up@^3.0.0:
   integrity sha512-1yD6RmLI1XBfxugvORwlck6f75tYL+iR0jqwsOrOxMZyGYqUuDhJ0l4AXdO1iX/FTs9cBAMEk1gWSEx1kSbylg==
   dependencies:
     locate-path "^3.0.0"
+
+fontawesome@^5.6.3:
+  version "5.6.3"
+  resolved "https://registry.yarnpkg.com/fontawesome/-/fontawesome-5.6.3.tgz#73f0b865fa2b0b384e69d531c05a02c643b72f95"
+  integrity sha512-FCc+CawwsJWWprVEg9X14yI7zI+l9YVAyhzgu70qwGeDn0tLLDH/dVfqgij72g4BBGgLGfK2qnvFGAmYUkhaWg==
 
 for-in@^1.0.2:
   version "1.0.2"
