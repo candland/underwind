@@ -1,13 +1,13 @@
 <?php
 function uw_testimonial( $atts , $content = null ) {
 
-	$atts = shortcode_atts(
-		array(
+  $atts = shortcode_atts(
+    array(
       'author' => '',
       'pic' => ''
-		),
-		$atts
-	);
+    ),
+    $atts
+  );
 
   return '<div class="mx-8 p-4 mb-4 bg-yellow-200 flex flex-row flex-wrap rounded-lg">' .
     '<div class="flex-initial min-w-full lg:min-w-0 flex justify-center pb-4 lg:pr-4">' .
@@ -23,14 +23,14 @@ add_shortcode( 'uw_testimonial', 'uw_testimonial' );
 
 function uw_social( $atts , $_content = null ) {
 
-	$atts = shortcode_atts(
-		array(
+  $atts = shortcode_atts(
+    array(
       'network' => '',
       'url' => '',
       'class' => ''
-		),
-		$atts
-	);
+    ),
+    $atts
+  );
 
   return '<a href="' . esc_attr($atts['url']) . '" target="_blank"><i class="fab fa-' . esc_attr($atts['network']) . ' ' . esc_attr($atts['class']) . '"></i></a>';
 
@@ -39,13 +39,13 @@ add_shortcode( 'social', 'uw_social' );
 
 function uw_quote( $atts , $content = null ) {
 
-	$atts = shortcode_atts(
-		array(
+  $atts = shortcode_atts(
+    array(
       'src' => '',
       'url' => ''
-		),
-		$atts
-	);
+    ),
+    $atts
+  );
 
   return '<div class="mx-8 p-4 mb-4 bg-blue-200 rounded-lg">' .
     $content . ' - ' . '<a href="' . esc_attr($atts['url']) . '" target="_blank">' . esc_attr($atts['src']) . '</a>' .
@@ -65,12 +65,12 @@ add_shortcode( 'lead', 'uw_lead' );
 
 function uw_div( $atts , $content = null ) {
 
-	$atts = shortcode_atts(
-		array(
+  $atts = shortcode_atts(
+    array(
       'class' => ''
-		),
-		$atts
-	);
+    ),
+    $atts
+  );
 
   return '<div class="' . esc_attr($atts['class']) . '">' .
     do_shortcode($content) .
@@ -82,13 +82,13 @@ add_shortcode( 'div', 'uw_div' );
 
 function uw_faq_item( $atts , $content = null ) {
 
-	$atts = shortcode_atts(
-		array(
+  $atts = shortcode_atts(
+    array(
       'title' => '',
       'active' => true
-		),
-		$atts
-	);
+    ),
+    $atts
+  );
 
   return '<div class="">' .
     '<h6 class="pb-1">' . esc_attr($atts['title']) . '</h6>' .
@@ -99,17 +99,16 @@ function uw_faq_item( $atts , $content = null ) {
 add_shortcode( 'faq_item', 'uw_faq_item' );
 
 
-
 function uw_sharing( $atts , $_content ) {
-	extract( shortcode_atts(
-		array(
+  extract( shortcode_atts(
+    array(
       'class' => '',
       'url' => urlencode(get_permalink()),
       'text' => urlencode(get_the_title()),
       'twitter' => '',
-		),
-		$atts
-	) );
+    ),
+    $atts
+  ) );
 
   $links = array(
     array(
@@ -142,11 +141,11 @@ function uw_sharing( $atts , $_content ) {
   $html = '<ul class="flex flex-row list-none">';
   foreach ( $links as $link )
     $html = $html .
-      '<li class="list-none">' .
-        '<a href="' . $link['url'] . '" class="" rel="nofollow" target="_blank">' .
-          '<i class="fab fa-fw fa-2x ' . $link['icon'] . ' ^CLASS"></i>' .
-        '</a>' .
-      '</li>';
+    '<li class="list-none">' .
+    '<a href="' . $link['url'] . '" class="" rel="nofollow" target="_blank">' .
+    '<i class="fab fa-fw fa-2x ' . $link['icon'] . ' ^CLASS"></i>' .
+    '</a>' .
+    '</li>';
 
   $html = $html . '</ul>';
   $html = str_replace('^URL', esc_attr($url), $html);
@@ -156,6 +155,4 @@ function uw_sharing( $atts , $_content ) {
 
   return $html;
 }
-
-
 add_shortcode( 'sharing', 'uw_sharing' );

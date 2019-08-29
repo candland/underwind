@@ -79,6 +79,9 @@ if ( ! function_exists( 'underwind_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+
+    // Process shortcodes in widgets
+    add_filter( 'widget_text', 'do_shortcode' );
 	}
 endif;
 add_action( 'after_setup_theme', 'underwind_setup' );

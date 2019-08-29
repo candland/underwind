@@ -15,13 +15,13 @@
 
 	<footer id="colophon" class="site-footer container mx-auto p-4">
     <div class="flex flex-wrap justify-between mb-12 mt-4">
-      <aside class="flex-auto w-100 lg:w-1/3">
+      <aside class="flex-auto w-100 lg:w-1/3 px-2 lg:pl-0">
         <?php dynamic_sidebar( 'footer-1' ); ?>
       </aside>
-      <aside class="flex-auto w-100 lg:w-1/3">
+      <aside class="flex-auto w-100 lg:w-1/3 px-2">
         <?php dynamic_sidebar( 'footer-2' ); ?>
       </aside>
-      <aside class="flex-auto w-100 lg:w-1/3">
+      <aside class="flex-auto w-100 lg:w-1/3 px-2 lg:pr-0">
         <?php dynamic_sidebar( 'footer-3' ); ?>
       </aside>
     </div>
