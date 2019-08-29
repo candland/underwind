@@ -27,7 +27,7 @@ function uw_social( $atts , $_content = null ) {
 		array(
       'network' => '',
       'url' => '',
-      'class' => 'text-gray-700'
+      'class' => ''
 		),
 		$atts
 	);
@@ -97,3 +97,65 @@ function uw_faq_item( $atts , $content = null ) {
 
 }
 add_shortcode( 'faq_item', 'uw_faq_item' );
+
+
+
+function uw_sharing( $atts , $_content ) {
+	extract( shortcode_atts(
+		array(
+      'class' => '',
+      'url' => urlencode(get_permalink()),
+      'text' => urlencode(get_the_title()),
+      'twitter' => '',
+		),
+		$atts
+	) );
+
+  $links = array(
+    array(
+      'name' => 'twitter',
+      'url' => 'http://twitter.com/share?text=^TEXT&url=^URL&via=^TWITTER',
+      'icon' => 'fa-twitter'
+    ),
+    array(
+      'name' => 'facebook',
+      'url' => 'http://www.facebook.com/sharer.php?u=^URL&t=^TEXT',
+      'icon' => 'fa-facebook'
+    ),
+    array(
+      'name' => 'linkedin',
+      'url' => 'http://www.linkedin.com/shareArticle?mini=true&url=^URL&title=^TEXT',
+      'icon' => 'fa-linkedin'
+    ),
+    array(
+      'name' => 'tumblr',
+      'url' => 'https://www.tumblr.com/share?v=3&u=^URL&t=^TEXT',
+      'icon' => 'fa-tumblr'
+    ),
+    array(
+      'name' => 'reddit',
+      'url' => 'http://www.reddit.com/submit?url=^URL&title=^TEXT',
+      'icon' => 'fa-reddit'
+    ),
+  );
+
+  $html = '<ul class="flex flex-row list-none">';
+  foreach ( $links as $link )
+    $html = $html .
+      '<li class="list-none">' .
+        '<a href="' . $link['url'] . '" class="" rel="nofollow" target="_blank">' .
+          '<i class="fab fa-fw fa-2x ' . $link['icon'] . ' ^CLASS"></i>' .
+        '</a>' .
+      '</li>';
+
+  $html = $html . '</ul>';
+  $html = str_replace('^URL', esc_attr($url), $html);
+  $html = str_replace('^TEXT', esc_attr($text), $html);
+  $html = str_replace('^TWITTER', esc_attr($twitter), $html);
+  $html = str_replace('^CLASS', esc_attr($class), $html);
+
+  return $html;
+}
+
+
+add_shortcode( 'sharing', 'uw_sharing' );

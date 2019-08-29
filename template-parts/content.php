@@ -46,6 +46,9 @@
 			get_the_title()
 		) );
 
+
+    echo do_shortcode('[sharing twitter="wpsupporthq" class="text-gray-700"]');
+
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'underwind' ),
 			'after'  => '</div>',
