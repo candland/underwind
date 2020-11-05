@@ -17,6 +17,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
+	<meta name="csh" content="eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMTAxNDA0ODktYmNmNS00ZWQ5LTgxZTctZjNlODk1OWE5MDQ0IiwiaW5kZXhfaWQiOiJkMmNlZGFmMC05MTgxLTRkNWItYjNmZi05YjM4YjYzMGFmMDgiLCJpbmRleF91cmwiOiJodHRwczovL3d3dy53cHN1cHBvcnRocS5jb20ifQ.9-19wfhKX5j0RhLRnnPIbACpj50DebT933bRKSBD6vQ"/>
+
 	<?php wp_head(); ?>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
