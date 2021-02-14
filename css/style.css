@@ -1,6 +1,6 @@
 @import "@fortawesome/fontawesome-free/css/all.css";
-@import "./tailwind-base.css";
-@import "./tailwind-comp.css";
+@import "./base.css";
 @import "./underscores.css";
-@import "./tailwind-util.css";
+@import "./components.css";
+@import "./utilities.css";
 @import "./custom.css";

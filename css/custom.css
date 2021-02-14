@@ -19,7 +19,7 @@ h6 {
 }
 
 p {
-  @apply pb-5
+  @apply pb-5;
 }
 
 a {
@@ -30,7 +30,7 @@ a {
 }
 
 label {
-  @apply block text-sm font-bold mb-2
+  @apply block text-sm font-bold mb-2;
 }
 
 input[type=text],
@@ -53,7 +53,9 @@ input[type=checkbox] {
 input[type=submit],
 input[type=reset],
 button,
-a.button {
+a.button,
+button.simpay-btn
+{
   @apply shadow bg-blue-500 text-white font-bold py-2 px-4 rounded;
   &:hover {
     @apply bg-blue-400;
@@ -64,7 +66,7 @@ a.button {
 }
 
 blockquote {
-  @apply px-5 text-gray-700 tracking-wider;
+  @apply px-5 text-gray-700 tracking-wider pb-5;
 }
 
 dl,

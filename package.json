@@ -2,24 +2,24 @@
   "name": "wpswind",
   "version": "1.0.0",
   "description": "Underscores & TailwindCSS",
-  "main": "index.js",
   "scripts": {
-    "dev": "parcel watch --public-url /wp-content/themes/underwind/dist css/style.css js/index.js --out-dir ./dist",
-    "prod": "NODE_ENV=development parcel build --public-url /wp-content/themes/underwind/dist css/style.css js/index.js --out-dir ./dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm-s dev:parcel",
+    "dev:parcel": "parcel watch --public-url /wp-content/themes/underwind/dist css/style.css js/index.js --out-dir ./dist",
+    "dev:tailwind": "tailwindcss build css/style.css -o dist/css/style.css",
+    "prod": "NODE_ENV=production run-s prod:parcel",
+    "prod:parcel": "parcel build --public-url /wp-content/themes/underwind/dist css/style.css js/index.js --dist-dir ./dist",
+    "prod:tailwind": "tailwindcss build css/style.css -o dist/css/style.css"
   },
   "author": "WP Support HQ",
   "license": "MIT",
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.10.2",
-    "@fullhuman/postcss-purgecss": "^1.2.0",
-    "autoprefixer": "^9.6.1",
-    "components": "^0.1.0",
-    "cssnano": "^4.1.10",
-    "parcel-bundler": "^1.12.3",
-    "postcss-import": "^12.0.1",
-    "tailwindcss": "^1.1.1",
-    "utilities": "^1.0.5"
+    "@fullhuman/postcss-purgecss": "2.3.0",
+    "autoprefixer": "^9",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^7",
+    "tailwindcss": "1.9.5",
+    "parcel": "^2.0.0-beta.1"
   },
   "dependencies": {
   }
