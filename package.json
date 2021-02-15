@@ -2,16 +2,17 @@
   "name": "wpswind",
   "version": "1.0.0",
   "description": "Underscores & TailwindCSS",
-  "scripts": {
-    "start": "npm-s dev:parcel",
-    "dev:parcel": "parcel watch --public-url /wp-content/themes/underwind/dist css/style.css js/index.js --out-dir ./dist",
-    "dev:tailwind": "tailwindcss build css/style.css -o dist/css/style.css",
-    "prod": "NODE_ENV=production run-s prod:parcel",
-    "prod:parcel": "parcel build --public-url /wp-content/themes/underwind/dist css/style.css js/index.js --dist-dir ./dist",
-    "prod:tailwind": "tailwindcss build css/style.css -o dist/css/style.css"
-  },
   "author": "WP Support HQ",
   "license": "MIT",
+  "scripts": {
+    "start": "npm-p dev:parcel dev:php",
+    "dev:parcel": "parcel watch --public-url /wp-content/themes/underwind/dist css/style.css js/index.js --out-dir ./dist",
+    "dev:php": "php -S localhost:5001 -t ../../../",
+    "prod": "NODE_ENV=production run-s prod:parcel prod:assets",
+    "prod:parcel": "parcel build --public-url /wp-content/themes/underwind/dist ./index.html --dist-dir ./dist",
+    "prod:assets": "sed -e \"s/\\/src\\/css\\/style.css/\\/dist\\/$(cd dist && ls style.*.css)/\" -e \"s/\\/src\\/js\\/index.js/\\/dist\\/$(cd dist && ls js.*.js)/\" src/assets.php > dist/assets.php"
+  },
+  "browserslist": "> 0.2%",
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.10.2",
     "@fullhuman/postcss-purgecss": "2.3.0",

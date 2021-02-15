@@ -154,9 +154,9 @@ add_action( 'widgets_init', 'underwind_widgets_init' );
  */
 function underwind_scripts() {
 	// wp_enqueue_style( 'underwind-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'underwind-dist-style', get_template_directory_uri() . '/dist/css/style.css');
-
-  wp_enqueue_script( 'underwind-dist-js', get_template_directory_uri() . '/dist/js/index.js', array(), '20151215', true );
+	// wp_enqueue_style( 'underwind-dist-style', get_template_directory_uri() . '/dist/css/style.css');
+  //
+  // wp_enqueue_script( 'underwind-dist-js', get_template_directory_uri() . '/dist/js/index.js', array(), '20151215', true );
 
 	// wp_enqueue_script( 'underwind-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
   //
@@ -194,6 +194,12 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+
+/**
+ * Load dist assets
+ */
+require get_template_directory() . '/dist/assets.php';
 
 /**
  * Shortcodes additions.

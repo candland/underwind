@@ -7,9 +7,16 @@ Generated _s theme with TailwindCSS & ParcelJS
 
 In the root theme dir...
 
+_Development_
+
 ```bash
 yarn install
-yarn run
+yarn start
+```
+
+```bash
+yarn install
+make build
 ```
 
 _Production_
@@ -18,7 +25,6 @@ _Production_
 yarn install
 yarn prod
 ```
-
 
 _s
 ===
